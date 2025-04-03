@@ -5,7 +5,7 @@ export default defineConfig(() => {
   return {
     root: './src',
     publicDir: '../public',
-    base: '/shadow-particles/',
+    base: './',
     build: {
       outDir: '../dist',
     },
