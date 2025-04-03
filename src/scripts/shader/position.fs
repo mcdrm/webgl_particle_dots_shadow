@@ -26,10 +26,10 @@ void main() {
   if (life < 0.0) {
     vec3 h = hash(vec3(time, vUv));
     life = h.x;
-    float radius = (h.y * (0.5 - 0.4) + 0.4);
+    float radius = (h.y * (0.5 - 0.4) + 1.4);
     pos = normalize(hash(vec3(vUv, time)) * 2.0 - 1.0) * radius;
   } else {
-    life -= deltaTime * 0.8;
+    life -= deltaTime * 0.3;
     pos += curl(pos * 0.35, time * 0.5, 0.1 + (1.0 - life) * 0.1) * 0.03;
   }
 

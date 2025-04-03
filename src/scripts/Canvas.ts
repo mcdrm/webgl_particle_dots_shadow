@@ -27,13 +27,13 @@ export class Canvas extends Three {
   }
 
   private setGui() {
-    pane.title = '(^_^)/'
+    pane.title = 'Control Panel'
     pane.addFpsBlade()
 
     {
-      const btn = pane.addButton({ title: 'stop' }).on('click', () => {
+      const btn = pane.addButton({ title: 'pause' }).on('click', () => {
         this.simulator.toggleRun()
-        btn.title = btn.title === 'stop' ? 'restart' : 'stop'
+        btn.title = btn.title === 'pause' ? 'resume' : 'pause'
       })
     }
     {
